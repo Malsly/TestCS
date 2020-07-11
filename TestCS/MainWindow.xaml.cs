@@ -34,6 +34,7 @@ namespace TestCS
                new ShipmentRegistrationVM();
 
             ShipmentRegistrationViewControl.DataContext = ShipmentRegistrationModelObject;
+
         }
     }
 }

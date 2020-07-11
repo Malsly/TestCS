@@ -4,12 +4,145 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TestCS.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Width="721" Height="509">
     <Grid>
-        <DataGrid ItemsSource="{Binding ShipmentRegistrations}">
-            
+        <DataGrid x:Name="ShipmentRegistrationTable" ItemsSource="{Binding ShipmentRegistrations}" CanUserAddRows="False" AutoGenerateColumns="False" CanUserSortColumns="True" Margin="0,0,0,66">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn SortMemberPath="Date" MinWidth="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Date, StringFormat=\{0:dd.MM.yyyy\}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[Date], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Дата">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn SortMemberPath="Organisation" MinWidth="127">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Organisation}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[Organisation], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Организация">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  SortMemberPath="City" MinWidth="88">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding City}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[City], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Город">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  SortMemberPath="Country" MinWidth="93">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Country}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[Country], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Страна">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  SortMemberPath="Manager" MinWidth="114">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Manager}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[Manager], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Менеджер">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  SortMemberPath="Count" MinWidth="119">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Count}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[Count], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Количество">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn SortMemberPath="Summa" MinWidth="91">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Summa}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.Header>
+                        <CheckBox IsChecked="{Binding DataContext.CheckGroups[Summa], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
+                            <TextBlock Text="Сумма">
+                            </TextBlock>
+                        </CheckBox>
+                    </DataGridTemplateColumn.Header>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
         </DataGrid>
+        
+        <StackPanel Orientation="Vertical" >
+            <Grid Background="#FFFD0000" Margin="0,443,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="∑ Количество:" Grid.Column="0"/>
+                    <TextBlock  Text="{Binding TotalCount}" Margin="0,0,0,0" Grid.Column="1"/>
+
+                    <Label Content="∑ Сумма:"  Margin="0,0,0,0" Grid.Column="2" />
+                    <TextBlock Text="{Binding TotalSum}"  Grid.Column="3" />
+                </Grid>
+            </StackPanel>
+        
+                <StackPanel Orientation="Vertical" Grid.IsSharedSizeScope="True" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.ColumnSpan="2" Command="{Binding UseGrouping}">
+                    Use Grouping
+                </Button>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.ColumnSpan="2" Command="{Binding ResetGrouping}">
+                    Reset Grouping
+                </Button>
+            </Grid>
+        </StackPanel>
 
     </Grid>
 </UserControl>
