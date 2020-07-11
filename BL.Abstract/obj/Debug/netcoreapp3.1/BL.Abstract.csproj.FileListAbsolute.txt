@@ -1,0 +1,12 @@
+D:\JOB\Test CS\TestCS\BL.Abstract\bin\Debug\netcoreapp3.1\BL.Abstract.deps.json
+D:\JOB\Test CS\TestCS\BL.Abstract\bin\Debug\netcoreapp3.1\BL.Abstract.dll
+D:\JOB\Test CS\TestCS\BL.Abstract\bin\Debug\netcoreapp3.1\BL.Abstract.pdb
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.csproj.CoreCompileInputs.cache
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.AssemblyInfoInputs.cache
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.AssemblyInfo.cs
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.dll
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.pdb
+D:\JOB\Test CS\TestCS\BL.Abstract\bin\Debug\netcoreapp3.1\Models.dll
+D:\JOB\Test CS\TestCS\BL.Abstract\bin\Debug\netcoreapp3.1\Models.pdb
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.csprojAssemblyReference.cache
+D:\JOB\Test CS\TestCS\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.csproj.CopyComplete
