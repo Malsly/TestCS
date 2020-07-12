@@ -8,7 +8,17 @@
     <Grid>
         <DataGrid x:Name="ShipmentRegistrationTable" ItemsSource="{Binding ShipmentRegistrations}" CanUserAddRows="False" AutoGenerateColumns="False" CanUserSortColumns="True" Margin="0,0,0,66">
             <DataGrid.Columns>
-                <DataGridTemplateColumn SortMemberPath="Date" MinWidth="80">
+                <DataGridTemplateColumn SortMemberPath="Date" MinWidth="80" >
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[Date], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[Date], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Date, StringFormat=\{0:dd.MM.yyyy\}}"/>
@@ -22,6 +32,16 @@
                     </DataGridTemplateColumn.Header>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn SortMemberPath="Organisation" MinWidth="127">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[Organisation], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[Organisation], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Organisation}" />
@@ -35,6 +55,16 @@
                     </DataGridTemplateColumn.Header>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn  SortMemberPath="City" MinWidth="88">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[City], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[City], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding City}" />
@@ -48,6 +78,16 @@
                     </DataGridTemplateColumn.Header>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn  SortMemberPath="Country" MinWidth="93">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[Country], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[Country], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Country}" />
@@ -61,6 +101,16 @@
                     </DataGridTemplateColumn.Header>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn  SortMemberPath="Manager" MinWidth="114">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[Manager], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[Manager], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Manager}" />
@@ -74,6 +124,16 @@
                     </DataGridTemplateColumn.Header>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn  SortMemberPath="Count" MinWidth="119">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[Count], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[Count], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Count}" />
@@ -86,7 +146,17 @@
                         </CheckBox>
                     </DataGridTemplateColumn.Header>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn SortMemberPath="Summa" MinWidth="91">
+                <DataGridTemplateColumn SortMemberPath="Summa"  >
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Visibility" Value="{Binding Path=DataContext.VisibilityGroups[Summa], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Visibility" Value="{Binding DataContext.VisibilityGroups[Summa], Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"/>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Summa}" />

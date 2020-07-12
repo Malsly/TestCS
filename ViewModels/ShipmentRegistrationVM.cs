@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows;
 using System.Windows.Data;
 using ViewModels.Infrastructure;
 
@@ -14,6 +15,7 @@ namespace ViewModels
     public class ShipmentRegistrationVM : INotifyPropertyChanged
     {
         private Dictionary<string, bool> checkGroups;
+        private Dictionary<string, Visibility> visibilityGroups;
         private ICollectionView shipmentRegistrations;
         private readonly IShipmentRegistrationService shipmentRegistrationService = new ShipmentRegistrationService();
         private int totalCount;
@@ -46,6 +48,16 @@ namespace ViewModels
             }
         }
 
+        public Dictionary<string, Visibility> VisibilityGroups
+        {
+            get { return visibilityGroups; }
+            set
+            {
+                visibilityGroups = value;
+                OnPropertyChanged(nameof(VisibilityGroups));
+            }
+        }
+
         public ICollectionView ShipmentRegistrations
         {
             get { return shipmentRegistrations; }
@@ -67,6 +79,7 @@ namespace ViewModels
             RefreshGroups();
             RefreshCount();
             RefreshSum();
+            RefreshVisibilityGroups();
 
             OnPropertyChanged(nameof(shipmentRegistrations));
             
@@ -80,7 +93,8 @@ namespace ViewModels
                 return useGrouping ??
                   (useGrouping = new RelayCommand(obj =>
                   {
-                      
+                      BindVisabilityToCheckGroups();
+                      OnPropertyChanged(nameof(VisibilityGroups));
                   }));
             }
         }
@@ -93,7 +107,8 @@ namespace ViewModels
                 return resetGrouping ??
                   (resetGrouping = new RelayCommand(obj =>
                   {
-                      
+                      RefreshVisibilityGroups();
+                      RefreshGroups();
                   }));
             }
         }
@@ -128,6 +143,36 @@ namespace ViewModels
                 {"Manager", false},
                 {"Count", false},
                 {"Summa", false}
+            };
+        }
+
+        public void BindVisabilityToCheckGroups() 
+        {
+            VisibilityGroups = new Dictionary<string, Visibility>();
+            foreach (KeyValuePair<string, bool> entry in CheckGroups) 
+            {
+                if(entry.Value) 
+                {
+                    VisibilityGroups.Add(entry.Key, Visibility.Hidden);
+                }
+                else 
+                {
+                    VisibilityGroups.Add(entry.Key, Visibility.Visible);
+                }
+            }    
+        }
+
+        public void RefreshVisibilityGroups()
+        {
+            VisibilityGroups = new Dictionary<string, Visibility>() 
+            {
+                {"Date", Visibility.Visible},
+                {"Organisation", Visibility.Visible},
+                {"City", Visibility.Visible},
+                {"Country", Visibility.Visible},
+                {"Manager", Visibility.Visible},
+                {"Count", Visibility.Visible},
+                {"Summa", Visibility.Visible}
             };
         }
 
