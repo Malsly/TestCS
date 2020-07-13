@@ -1,11 +1,10 @@
 ﻿using DAL.Abstract;
-using DAL_Abstract;
 using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DAl.Impl.Mappers
+namespace DAL.Implementation.Mappers
 {
     public class ShipmentRegistrationMapper : IMapper<ShipmentRegistration, ShipmentRegistrationDTO, IGenericRepository<ShipmentRegistration>>
     {

@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Abstract
+namespace DAL.Abstract
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {

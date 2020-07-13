@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TestCS.Views"
              mc:Ignorable="d" Width="721" Height="509">
     <Grid>
-        <DataGrid x:Name="ShipmentRegistrationTable" ItemsSource="{Binding ShipmentRegistrations}" CanUserAddRows="False" AutoGenerateColumns="False" CanUserSortColumns="True" Margin="0,0,0,66">
+        <DataGrid x:Name="ShipmentRegistrationTable" ItemsSource="{Binding ShipmentRegistrations}" CanUserAddRows="False" AutoGenerateColumns="False" CanUserSortColumns="True" Margin="0,18,0,66">
             <DataGrid.Columns>
                 <DataGridTemplateColumn SortMemberPath="Date" MinWidth="80" >
                     <DataGridTemplateColumn.HeaderStyle>
@@ -23,7 +23,7 @@
                         <DataTemplate>
                             <TextBlock Text="{Binding Date, StringFormat=\{0:dd.MM.yyyy\}}"/>
                         </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn.CellTemplate>  
                     <DataGridTemplateColumn.Header>
                         <CheckBox IsChecked="{Binding DataContext.CheckGroups[Date], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}">
                             <TextBlock Text="Дата">
@@ -173,7 +173,7 @@
         </DataGrid>
         
         <StackPanel Orientation="Vertical" >
-            <Grid Background="#FFFD0000" Margin="0,443,0,0">
+            <Grid Margin="0,443,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />

@@ -1,5 +1,5 @@
-﻿using DAL.Implementation;
-using DAL_Abstract;
+﻿using DAL.Abstract;
+using DAL.Implementation;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Implementation
+namespace DAL.Implementation
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {

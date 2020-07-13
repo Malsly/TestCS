@@ -11,9 +11,9 @@ D:\JOB\Test CS\TestCS\DAL.Implementation\obj\Debug\netcoreapp3.1\DAL.Implementat
 D:\JOB\Test CS\TestCS\DAL.Implementation\obj\Debug\netcoreapp3.1\DAL.Implementation.pdb
 D:\JOB\Test CS\TestCS\DAL.Implementation\bin\Debug\netcoreapp3.1\DAL.Implementation.runtimeconfig.json
 D:\JOB\Test CS\TestCS\DAL.Implementation\bin\Debug\netcoreapp3.1\DAL.Implementation.runtimeconfig.dev.json
-D:\JOB\Test CS\TestCS\DAL.Implementation\obj\Debug\netcoreapp3.1\DAL.Implementation.csproj.CoreCompileInputs.cache
 D:\JOB\Test CS\TestCS\DAL.Implementation\obj\Debug\netcoreapp3.1\DAL.Implementation.genruntimeconfig.cache
 D:\JOB\Test CS\TestCS\DAL.Implementation\bin\Debug\netcoreapp3.1\DAL.Abstract.dll
 D:\JOB\Test CS\TestCS\DAL.Implementation\bin\Debug\netcoreapp3.1\Models.dll
 D:\JOB\Test CS\TestCS\DAL.Implementation\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
 D:\JOB\Test CS\TestCS\DAL.Implementation\bin\Debug\netcoreapp3.1\Models.pdb
+D:\JOB\Test CS\TestCS\DAL.Implementation\obj\Debug\netcoreapp3.1\DAL.Implementation.csproj.CoreCompileInputs.cache

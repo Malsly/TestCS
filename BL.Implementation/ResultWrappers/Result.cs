@@ -1,6 +1,6 @@
 ﻿using BL.Abstract.ResultWrappers;
 
-namespace BL.Impl.ResultWrappers
+namespace BL.Implementation.ResultWrappers
 {
     public class Result : IResult
     {

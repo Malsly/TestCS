@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL_Abstract;
 using DAL.Implementation;
+using DAL.Abstract;
 
-namespace DAL_Implementation
+namespace DAL.Implementation
 {
     public class UnitOfWork : IDisposable, IUnitOfWork
     {

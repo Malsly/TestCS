@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Abstract
+namespace DAL.Abstract
 {
     public interface IUnitOfWork
     {

@@ -1,17 +1,16 @@
 ﻿using BL.Abstract;
 using BL.Abstract.ResultWrappers;
-using BL.Impl.ResultWrappers;
-using DAl.Impl.Mappers;
+using BL.Implementation.ResultWrappers;
 using DAL.Abstract;
-using DAL_Abstract;
-using DAL_Implementation;
+using DAL.Implementation;
+using DAL.Implementation.Mappers;
 using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BL.Impl
+namespace BL.Implementation
 {
     public class ShipmentRegistrationService : IShipmentRegistrationService
     {

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestCS" xmlns:views="clr-namespace:TestCS.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="555" Width="771">
+        Title="MainWindow" Height="605" Width="771">
     <Grid>
-        <views:ShipmentRegistrationView x:Name="ShipmentRegistrationViewControl" Loaded="ShipmentRegistrationViewControl_Loaded" />
+        <views:ShipmentRegistrationView x:Name="ShipmentRegistrationViewControl" Loaded="ShipmentRegistrationViewControl_Loaded" Margin="5,5,5,5" />
     </Grid>
 </Window>

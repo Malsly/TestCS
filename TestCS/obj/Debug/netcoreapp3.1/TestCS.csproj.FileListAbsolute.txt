@@ -65,3 +65,4 @@ D:\JOB\Test CS\TestCS\TestCS\bin\Debug\netcoreapp3.1\BL.Implementation.pdb
 D:\JOB\Test CS\TestCS\TestCS\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
 D:\JOB\Test CS\TestCS\TestCS\bin\Debug\netcoreapp3.1\DAL.Implementation.pdb
 D:\JOB\Test CS\TestCS\TestCS\bin\Debug\netcoreapp3.1\Models.pdb
+D:\JOB\Test CS\TestCS\TestCS\bin\Debug\netcoreapp3.1\TestCS.dll.config
